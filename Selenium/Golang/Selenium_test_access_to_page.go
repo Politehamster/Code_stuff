@@ -31,10 +31,9 @@ import (
 
 
 func main() {
-
 	const (
-		seleniumPath    = "vendor/selenium-server-standalone-3.141.59.jar"
-		geckoDriverPath = "vendor/geckodriver-v0.18.0-linux64"
+		seleniumPath    = "h:/_Programs/_dev/Selenium_drivers/selenium-server-standalone-3.141.59.jar"
+		geckoDriverPath = "h:/_Programs/_dev/Selenium_drivers/geckodriver.exe"
 		port            = 8080
 	)
 	opts := []selenium.ServiceOption{
@@ -45,7 +44,7 @@ func main() {
 	selenium.SetDebug(true)
 	service, err := selenium.NewSeleniumService(seleniumPath, port, opts...)
 	if err != nil {
-		panic(err)
+//		panic(err)
 	}
 	defer service.Stop()
 
